@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/modal.css">
+
+    <!-- script -->
+    <script src="./src/scripts/engine.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Jogo da memória</h2>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">Reiniciar</button>
+    </div>
+    <div class="pontuacao">
+        <p>Total de tentativas:</p> 
+        <span class="tentativas">0</span>
+    </div>   
+
+    <div class="modal-wrapper">
+        <div class="modal-card">
+            <p class="mensagem">Parabéns! Você terminou o jogo em apenas:</p> 
+            <span class="game-over-msg">0 tentativas</span>
+            <button class="reset" onclick="window.location.reload()">Jogar novamente</button>
+        </div>
+    </div>
+</body>
+</html>

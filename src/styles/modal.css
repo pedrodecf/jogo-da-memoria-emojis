@@ -1,0 +1,67 @@
+:root {
+  --body-bg-color: #FAF8F1;
+  --container-bg-color: #FAEAB1;
+  --card-bg-color: #FAF8F1;
+  --card-after-bg-color: #C58940;
+}
+
+.modal-wrapper {
+    position: absolute;
+    place-content: center;
+    visibility: hidden;
+    inset: 0;
+    display: flex;
+    margin: auto;
+    background-color: #0000007a;
+}
+
+.modal-wrapper.open {
+    visibility: visible;
+}
+
+.modal-card {
+    background-color: var(--container-bg-color);
+    height: max-content;
+    width: 30rem;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+    box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);   
+    border-radius: 15px;
+    animation: slide-bottom 0.5s ease-out both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-card p {
+    color: var(--card-after-bg-color);
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.modal-card span {
+    color: var(--card-after-bg-color);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;    
+}
+
+.modal-card button {
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+}

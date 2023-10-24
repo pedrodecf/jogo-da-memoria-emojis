@@ -1,0 +1,126 @@
+:root {
+  --body-bg-color: #FAF8F1;
+  --container-bg-color: #FAEAB1;
+  --card-bg-color: #FAF8F1;
+  --card-after-bg-color: #C58940;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--body-bg-color);
+  user-select: none;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: var(--container-bg-color);
+  padding: 40px 60px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+  box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--card-after-bg-color);
+  letter-spacing: 0.1em;
+}
+
+.reset {
+  padding: 15px 20px;
+  width: 50%;
+  color: var(--body-bg-color);
+  background-color: var(--card-after-bg-color);
+  border: none;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.game {
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg-color);
+  font-size: 32px;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  transition: 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--card-after-bg-color);
+  backface-visibility: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  transform: rotateY(0deg);
+}
+
+.item.boxOpen {
+  transform: rotateY(0deg);
+  transition: 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  
+}
+
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg);
+  transition: 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+.pontuacao {
+  position: relative;
+  left: 400px; 
+  color: var(--card-after-bg-color);
+  background-color: var(--container-bg-color);  
+  height: 120px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  -webkit-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+  box-shadow: 0px 10px 29px -17px rgba(0,0,0,0.20);
+}
+
+
+.pontuacao span {
+  font-size: 24px;
+
+}
+
+.pontuacao p, span {
+  font-weight: 600;
+}
