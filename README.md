@@ -43,8 +43,8 @@
 ### Minhas modificações:
 
 1. Em relação ao projeto original, ajustei todo o estilo visual do jogo deixando ao meu ver mais bonito.
-2. Adicionei um sistema de "tentativas" e fiz uma represetanção visual ao lado da caixa do jogo.
-3. Adicionei um sistema de alerta mais intuitivo, onde exibe a mensagem final de "Parabéns" (com uma mensagem exibindo sua quantidade de tentativas) já identada com o visual do jogo.
+2. Adicionei um sistema de "tentativas" e fiz uma represetação visual ao lado da caixa do jogo.
+3. Adicionei um sistema de alerta mais intuitivo, onde exibe a mensagem final de "Parabéns" (com uma mensagem exibindo sua quantidade de tentativas) já seguindo a identidade visual do jogo.
 
 ### Futuras modificações:
 
